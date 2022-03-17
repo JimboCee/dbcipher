@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <form name = "caesarCipher" id = "ceasarForm"> 
+            <label for = "uMessage">Enter Your Message:</label><br>
+            <!--enter your message to be encoded or decoded-->
+            <textarea id = "uMessage" rows = "4" cols = "50" oninput="enDeCode()">
+                
+            </textarea>
+            <br><br>
+            <label for = "encode">Encode:</label>
+            <input type = "radio" name = "code" id = "encode" checked onchange = "enDeCode()">
+            <!-- radio button encode -->
+            <label for = "decode">Decode:</label>
+            <input type = "radio" name = "code" id = "decode" onchange = "enDeCode"()>
+            
+            <!-- radio button decode -->
+            <!-- <button id = "submitButton" onclick="document.getElementById('ceasarForm').submit();">Submit</button>
+            submit button - enable user to submit code to be encoded or decoded -->
+            
+            <br><br>
+            <label for = "userKey">Key:</label>
+            <input type = "number" min = "0" max = "26" id = "userKey" value = "1" onchange = "enDeCode()">
+            <!--user key - min 0 max 26 for alphabet linkage to characters in textinput-->
+            <br> <br>
+            <label for = "output">Output:</label><br>
+            <textarea id = "output" rows = "4" cols = "50">
+            
+            </textarea> 
+
+        </form>
+        <script src="cipher.js"></script>
+    </body>
+    </html>
